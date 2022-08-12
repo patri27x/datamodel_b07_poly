@@ -65,7 +65,7 @@ This is a preliminary root container for all (meta-)data.
 
 Container for personal identifiers related to an author
 
-- __type*__
+- __scheme*__
   - Type: string
   - Description: Type or scheme of personal identifier
 - __identifier*__
