@@ -106,6 +106,9 @@ Container for personal identifiers related to an author
 - __notice__
   - Type: string
   - Description: ...
+- __reactant__
+  - Type: Reactant
+  - Description: ...
 
 
 ### Reactant[_ChemicalCompound_]
