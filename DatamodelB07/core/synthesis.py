@@ -8,6 +8,7 @@ from pydantic import Field
 from typing import List
 from typing import Optional
 from .apparatus import Apparatus
+from .chemicalcompound import ChemicalCompound
 from .filmpreparation import FilmPreparation
 from .physicalparameter import PhysicalParameter
 from .processing import Processing
@@ -46,7 +47,7 @@ class Synthesis(sdRDM.DataModel):
     description="All subsequent processing steps",    default_factory=ListPlus,    )
 
     __repo__: Optional[str] = PrivateAttr(default="git://github.com/FAIRChemistry/datamodel_b07.git")
-    __commit__: Optional[str] = PrivateAttr(default="bf57b675676ba13af4541ef0bafc065b22cff440")
+    __commit__: Optional[str] = PrivateAttr(default="b7f50d16a78a14617f5b1cda63573feae5c120fd")
     
     def add_to_reactants(
         self,

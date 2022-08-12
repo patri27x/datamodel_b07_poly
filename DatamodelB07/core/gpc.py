@@ -36,5 +36,5 @@ class GPC(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="bf57b675676ba13af4541ef0bafc065b22cff440"
+        default="b7f50d16a78a14617f5b1cda63573feae5c120fd"
     )

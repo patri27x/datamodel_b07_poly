@@ -1,5 +1,6 @@
 ```mermaid
 classDiagram
+    ChemicalCompound <-- Reactant
     Dataset *-- Author
     Dataset *-- Synthesis
     Dataset *-- Analysis
