@@ -219,35 +219,35 @@ All physical parameters that are relevant for the chemical reaction
 ### NMR
 
 
-- __NMR_1H__
+- __nmr_1h__
   - Type: string
   - Description: ...
 - __m_PEO*__
   - Type: float
   - Description: Polyethylene oxide
-- __0-5_n_PO__
+- __zero-five_n_PO__
   - Type: float
   - Description: Fraction propylene oxide
-- __M_n_in_kg_per_mole__
+- __m_n_in_kg_per_mole__
   - Type: float
   - Description: Number average molar mass
-- __HLB__
+- __hlb__
   - Type: string
   - Description: Hydrophilic to lipophilic balance
 
 
 ### GPC
 
-- __Mn_in_kg_per_mole*__
+- __mn_in_kg_per_mole*__
   - Type: float
   - Description: Number average molar mass
-- __Mw_in_kg_per_mole__
+- __mw_in_kg_per_mole__
   - Type: float
   - Description: Mass average molar mass
-- __PDI__
+- __pdi__
   - Type: float
   - Description: Polydispersity index
-- __SP_in_percent__
+- __sp_in_percent__
   - Type: float
   - Description: Fractin of side products
 
@@ -257,10 +257,10 @@ All physical parameters that are relevant for the chemical reaction
 - __m_Poly_in_grams*__
   - Type: float
   - Description: Mass of the Polymer in grams
-- __Precursor__
+- __precursor__
   - Type: string
   - Description: Name of the precursor
-- __Notice__
+- __notice__
   - Type: string
   - Description: Here you can write down additional notes
   
@@ -273,17 +273,17 @@ All physical parameters that are relevant for the chemical reaction
 - __m_FC_in_grams__
   - Type: float
   - Description: Mass film carbonized
-- __Loss_in_grams__
+- __loss_in_grams__
   - Type: float
   - Description: Loss in grams
-- __Loss_in_percent__
+- __loss_in_percent__
   - Type: float
   - Description: Loss in percernt
 
 
 ### SAXS
 
-- __Ordered*__
+- __ordered*__
   - Type: string
   - Description: If a crystalline structure is present
 - __q10__
@@ -307,31 +307,31 @@ All physical parameters that are relevant for the chemical reaction
 - __q10_to_q21_ratio__
   - Type: float
   - Description: Ratio of the scattering vectors 10 and 21
-- __Geometry__
+- __geometry__
   - Type: string
   - Description: Hexagonal, cubic ...
 
 
 ### PhysisorptionMeasurements
 
-- __Hysteresis*__
+- __hysteresis*__
   - Type: string
   - Description: Type of hysteresis behaviour
-- __Pore_diameter_in_nanometer__
+- __pore_diameter_in_nanometer__
   - Type: float
   - Description: Self explanatory
-- __Vtotal_in_cubic_centimeters_per_gram__
+- __vtotal_in_cubic_centimeters_per_gram__
   - Type: float
   - Description: Total volume
-- __SSAtotal_in_square_meter_per_gram__
+- __sSAtotal_in_square_meter_per_gram__
   - Type: float
   - Description: Specific surface area
-- __C_constant__
+- __c_constant__
   - Type: float
   - Description: Controlling parameter
-- __Wall_thickness_in_nanometer__
+- __wall_thickness_in_nanometer__
   - Type: float
   - Description: Self explanatory
-- __Notice__
+- __notice__
   - Type: string
   - Description: Here you can write down additional notes
