@@ -218,7 +218,6 @@ All physical parameters that are relevant for the chemical reaction
 
 ### NMR
 
-
 - __nmr_1h__
   - Type: string
   - Description: ...
