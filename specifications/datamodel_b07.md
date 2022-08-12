@@ -113,21 +113,17 @@ Container for personal identifiers related to an author
 Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
 
 - __product__
-  - Type: Product
+  - Type: bool
   - Description:
-  - Multiple: True
 - __educt__
-  - Type: Educt
+  - Type: bool
   - Description:
-  - Multiple: True
 - __catalyst__
-  - Type: Catalyst
+  - Type: bool
   - Description:
-  - Multiple: True
 - __cocatalyst__
-  - Type: Cocatalyst
+  - Type: bool
   - Description:
-  - Multiple: True
 
 
 ### ChemicalCompound
@@ -171,6 +167,23 @@ Stoichiometric information about the compound
 - __molar_mass__
   - Type: float
   - Description: Molar mass of the compound in g per mol
+
+### Apparatus
+
+Lorem ipsum
+
+- __field__
+  - Type: string
+  - Description:
+
+
+### Processing
+
+Lorem ipsum
+
+- __field__
+  - Type: string
+  - Description:
 
 
 ### PhysicalParameter
