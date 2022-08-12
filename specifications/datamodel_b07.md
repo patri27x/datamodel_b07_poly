@@ -39,9 +39,9 @@ This is a preliminary root container for all (meta-)data.
   - Description: ...
  
 
- ### Author
+### Author
 
- Container for information regarding persons who worked on a dataset.
+Container for information regarding persons who worked on a dataset.
 
 - __name*__
   - Type: string
