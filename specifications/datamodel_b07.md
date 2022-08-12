@@ -33,10 +33,10 @@ This is a preliminary root container for all (meta-)data.
   - Description: License for the dataset
 - __synthesis*__
   - Type: Synthesis
-  - Description:
+  - Description: ...
 - __analysis__
   - Type: Analysis
-  - Description:
+  - Description: ...
  
 
  ### Author
@@ -94,7 +94,7 @@ Container for personal identifiers related to an author
   - Multiple: True
 - __apparatus__
   - Type: Apparatus
-  - Description:
+  - Description: ...
   - Multiple: True
 - __processing__
   - Type: Processing
@@ -114,16 +114,16 @@ Chemical compound that is involved in the chemical reaction, either as the produ
 
 - __product__
   - Type: bool
-  - Description:
+  - Description: ...
 - __educt__
   - Type: bool
-  - Description:
+  - Description: ...
 - __catalyst__
   - Type: bool
-  - Description:
+  - Description: ...
 - __cocatalyst__
   - Type: bool
-  - Description:
+  - Description: ...
 
 
 ### ChemicalCompound
@@ -174,7 +174,7 @@ Lorem ipsum
 
 - __field__
   - Type: string
-  - Description:
+  - Description: ...
 
 
 ### Processing
@@ -183,7 +183,7 @@ Lorem ipsum
 
 - __field__
   - Type: string
-  - Description:
+  - Description: ...
 
 
 ### PhysicalParameter
@@ -205,23 +205,23 @@ All physical parameters that are relevant for the chemical reaction
 
 - __nmr__
   - Type: NMR
-  - Description:
+  - Description: ...
 - __gpc__
   - Type: GPC
-  - Description:
+  - Description: ...
 - __saxs__
   - Type: SAXS
-  - Description:
+  - Description: ...
 - __physisorption__
   - Type: Physisorption
-  - Description:
+  - Description: ...
 
 ### NMR
 
 
 - __NMR_1H__
   - Type: string
-  - Description:
+  - Description: ...
 - __m_PEO*__
   - Type: float
   - Description: Polyethylene oxide
