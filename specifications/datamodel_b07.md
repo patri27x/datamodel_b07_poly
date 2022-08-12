@@ -113,16 +113,16 @@ Container for personal identifiers related to an author
 Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
 
 - __product__
-  - Type: bool
+  - Type: string
   - Description: ...
 - __educt__
-  - Type: bool
+  - Type: string
   - Description: ...
 - __catalyst__
-  - Type: bool
+  - Type: string
   - Description: ...
 - __cocatalyst__
-  - Type: bool
+  - Type: string
   - Description: ...
 
 
