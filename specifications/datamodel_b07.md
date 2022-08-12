@@ -111,7 +111,7 @@ Container for personal identifiers related to an author
   - Description: ...
 
 
-### Reactant[_ChemicalCompound_]
+### Reactant [_ChemicalCompound_]
 
 Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
 
@@ -225,10 +225,10 @@ All physical parameters that are relevant for the chemical reaction
 - __nmr_1h__
   - Type: string
   - Description: ...
-- __m_PEO*__
+- __m_peo*__
   - Type: float
   - Description: Polyethylene oxide
-- __zero-five_n_PO__
+- __zero-five_n_po__
   - Type: float
   - Description: Fraction propylene oxide
 - __m_n_in_kg_per_mole__
@@ -257,7 +257,7 @@ All physical parameters that are relevant for the chemical reaction
 
 ### FilmPreparation
 
-- __m_Poly_in_grams*__
+- __m_poly_in_grams*__
   - Type: float
   - Description: Mass of the Polymer in grams
 - __precursor__
@@ -270,10 +270,10 @@ All physical parameters that are relevant for the chemical reaction
 
 ### CarbonizationProcesses
 
-- __m_F_in_grams*__
+- __m_f_in_grams*__
   - Type: float
   - Description: Mass film
-- __m_FC_in_grams__
+- __m_fc_in_grams__
   - Type: float
   - Description: Mass film carbonized
 - __loss_in_grams__
@@ -326,7 +326,7 @@ All physical parameters that are relevant for the chemical reaction
 - __vtotal_in_cubic_centimeters_per_gram__
   - Type: float
   - Description: Total volume
-- __sSAtotal_in_square_meter_per_gram__
+- __ssatotal_in_square_meter_per_gram__
   - Type: float
   - Description: Specific surface area
 - __c_constant__
