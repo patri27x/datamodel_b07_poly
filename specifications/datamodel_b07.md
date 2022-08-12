@@ -185,6 +185,10 @@ Lorem ipsum
   - Type: string
   - Description: ...
 
+- __film_preparation__
+  - Type: FilmPreparation
+  - Description: ...
+
 
 ### PhysicalParameter
 
@@ -214,6 +218,9 @@ All physical parameters that are relevant for the chemical reaction
   - Description: ...
 - __physisorption__
   - Type: Physisorption
+  - Description: ...
+- __carbonization__
+  - Type: Carbonization
   - Description: ...
 
 ### NMR
@@ -264,7 +271,7 @@ All physical parameters that are relevant for the chemical reaction
   - Description: Here you can write down additional notes
   
 
-### CarbonizationProcesses
+### Carbonization
 
 - __m_F_in_grams*__
   - Type: float
@@ -322,7 +329,7 @@ All physical parameters that are relevant for the chemical reaction
 - __vtotal_in_cubic_centimeters_per_gram__
   - Type: float
   - Description: Total volume
-- __sSAtotal_in_square_meter_per_gram__
+- __ssatotal_in_square_meter_per_gram__
   - Type: float
   - Description: Specific surface area
 - __c_constant__
