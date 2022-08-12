@@ -312,7 +312,7 @@ All physical parameters that are relevant for the chemical reaction
   - Description: Hexagonal, cubic ...
 
 
-### PhysisorptionMeasurements
+### Physisorption
 
 - __hysteresis*__
   - Type: string
