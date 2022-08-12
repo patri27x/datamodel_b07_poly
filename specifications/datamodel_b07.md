@@ -133,7 +133,7 @@ Container for personal identifiers related to an author
   - Description: s for solid, l for liquid and g for gaseous
 
 
-### Reactant [_ChemicalCompound_]
+### Reactant
 
 Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
 
