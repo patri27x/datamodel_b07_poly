@@ -1,0 +1,347 @@
+{
+  "docstring": "This is the perliminary data model for CRC 1333 project B07. At the current time, the data model is still under development and major changes can occur at any time. Please feel free to make changes and contribute to the project.",
+  "Dataset": {
+    "attributes": {
+      "id": {
+        "description": "Unique identifier for the dataset"
+      },
+      "name": {
+        "description": "Descriptive name of the dataset"
+      },
+      "date": {
+        "description": "Date/time when the dataset was created"
+      },
+      "authors": {
+        "multiple": "True",
+        "description": "Persons who worked on the dataset"
+      },
+      "subjects": {
+        "multiple": "True",
+        "description": "Research subjects covered by the datset"
+      },
+      "keywords": {
+        "multiple": "True",
+        "description": "Descriptive keywords to describe the dataset"
+      },
+      "license": {
+        "description": "License for the dataset"
+      },
+      "synthesis": {
+        "description": "..."
+      },
+      "analysis": {
+        "description": "..."
+      }
+    },
+    "docstring": "This is a preliminary root container for all (meta-)data.\n"
+  },
+  "Author": {
+    "attributes": {
+      "name": {
+        "description": "Full name of the author"
+      },
+      "affiliation": {
+        "description": "Organisation the author is affiliated with."
+      },
+      "email": {
+        "description": "Contact e-mail address of the author"
+      },
+      "phone": {
+        "description": "Contact phone number of the author"
+      },
+      "pid": {
+        "multiple": "True",
+        "description": "Personal identifiers of the author"
+      }
+    },
+    "docstring": "Container for information regarding persons who worked on a dataset.\n"
+  },
+  "PersonalID": {
+    "attributes": {
+      "scheme": {
+        "description": "Type or scheme of personal identifier"
+      },
+      "identifier": {
+        "description": "String representation of the personal identifier"
+      }
+    },
+    "docstring": "Container for personal identifiers related to an author\n"
+  },
+  "Synthesis": {
+    "attributes": {
+      "reaction_type": {
+        "description": "Name of the reaction type",
+        "multiple": "True"
+      },
+      "reactants": {
+        "description": "All reactants that are involved in the reaction",
+        "multiple": "True"
+      },
+      "solvent": {
+        "description": "Solvent used for the reaction"
+      },
+      "physical_parameters": {
+        "description": "...",
+        "multiple": "True"
+      },
+      "apparatus": {
+        "description": "...",
+        "multiple": "True"
+      },
+      "processing": {
+        "description": "All subsequent processing steps",
+        "multiple": "True"
+      },
+      "yield": {
+        "description": "Yield in percent"
+      },
+      "notice": {
+        "description": "..."
+      },
+      "reactant": {
+        "description": "..."
+      }
+    },
+    "docstring": "...description...\n"
+  },
+  "ChemicalCompound": {
+    "attributes": {
+      "name": {
+        "description": "If possible IUPAC name of the compound",
+        "multiple": "True"
+      },
+      "formula": {
+        "description": "Molecular formula of the compound"
+      },
+      "pureness": {
+        "description": "Pureness of the compound in percent"
+      },
+      "supplier": {
+        "description": "Name of the supplier of the compound"
+      },
+      "stoichiometry": {
+        "description": "Stoichiometric information like equivalents, mass, amount of substance, volume"
+      },
+      "state_of_matter": {
+        "description": "s for solid, l for liquid and g for gaseous"
+      }
+    },
+    "docstring": "...\n"
+  },
+  "Reactant": {
+    "attributes": {
+      "product": {
+        "description": "..."
+      },
+      "educt": {
+        "description": "..."
+      },
+      "catalyst": {
+        "description": "..."
+      },
+      "cocatalyst": {
+        "description": "..."
+      }
+    },
+    "docstring": "Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.\n"
+  },
+  "Stoichiometry": {
+    "attributes": {
+      "equivalents": {
+        "description": "Used equivalents in relation to the reference compound"
+      },
+      "amount_of_substance": {
+        "description": "Amount of substance n in mmol"
+      },
+      "mass": {
+        "description": "Used mass of the compound in g"
+      },
+      "volume": {
+        "description": "Volume of the compound"
+      },
+      "molar_mass": {
+        "description": "Molar mass of the compound in g per mol"
+      }
+    },
+    "docstring": "Stoichiometric information about the compound.\n"
+  },
+  "Apparatus": {
+    "attributes": {
+      "field": {
+        "description": "..."
+      }
+    },
+    "docstring": "Lorem ipsum\n"
+  },
+  "Processing": {
+    "attributes": {
+      "field": {
+        "description": "..."
+      },
+      "film_preparation": {
+        "description": "..."
+      }
+    },
+    "docstring": "Lorem ipsum\n"
+  },
+  "PhysicalParameter": {
+    "attributes": {
+      "temperature": {
+        "description": "Temperature in Kelvin"
+      },
+      "time": {
+        "description": "Time in hours"
+      },
+      "pressure": {
+        "description": "pressure in mbar"
+      }
+    },
+    "docstring": "All physical parameters that are relevant for the chemical reaction.\n"
+  },
+  "Analysis": {
+    "attributes": {
+      "nmr": {
+        "description": "..."
+      },
+      "gpc": {
+        "description": "..."
+      },
+      "saxs": {
+        "description": "..."
+      },
+      "physisorption": {
+        "description": "..."
+      },
+      "carbonization": {
+        "description": "..."
+      }
+    },
+    "docstring": "...\n"
+  },
+  "NMR": {
+    "attributes": {
+      "nmr_1h": {
+        "description": "..."
+      },
+      "m_peo": {
+        "description": "Polyethylene oxide"
+      },
+      "zeropointfive_n_po": {
+        "description": "Fraction propylene oxide"
+      },
+      "m_n_in_kg_per_mole": {
+        "description": "Number average molar mass"
+      },
+      "hlb": {
+        "description": "Hydrophilic to lipophilic balance"
+      }
+    },
+    "docstring": "...\n"
+  },
+  "GPC": {
+    "attributes": {
+      "mn_in_kg_per_mole": {
+        "description": "Number average molar mass"
+      },
+      "mw_in_kg_per_mole": {
+        "description": "Mass average molar mass"
+      },
+      "pdi": {
+        "description": "Polydispersity index"
+      },
+      "sp_in_percent": {
+        "description": "Fractin of side products"
+      }
+    },
+    "docstring": "...\n"
+  },
+  "FilmPreparation": {
+    "attributes": {
+      "m_poly_in_grams": {
+        "description": "Mass of the Polymer in grams"
+      },
+      "precursor": {
+        "description": "Name of the precursor"
+      },
+      "notice": {
+        "description": "Here you can write down additional notes."
+      }
+    },
+    "docstring": "...\n"
+  },
+  "Carbonization": {
+    "attributes": {
+      "m_f_in_grams": {
+        "description": "Mass film"
+      },
+      "m_fc_in_grams": {
+        "description": "Mass film carbonized"
+      },
+      "loss_in_grams": {
+        "description": "Loss in grams"
+      },
+      "loss_in_percent": {
+        "description": "Loss in percent"
+      }
+    },
+    "docstring": "...\n"
+  },
+  "SAXS": {
+    "attributes": {
+      "ordered": {
+        "description": "If a crystalline structure is present"
+      },
+      "q10": {
+        "description": "Scattering vector in 10 plane"
+      },
+      "q11": {
+        "description": "Scattering vector in 11 plane"
+      },
+      "q20": {
+        "description": "Scattering vector in 20 plane"
+      },
+      "q21": {
+        "description": "Scattering vector in 21 plane"
+      },
+      "q10_to_q11_ratio": {
+        "description": "Ratio of the scattering vectors 10 and 11"
+      },
+      "q10_to_q20_ratio": {
+        "description": "Ratio of the scattering vectors 10 and 20"
+      },
+      "q10_to_q21_ratio": {
+        "description": "Ratio of the scattering vectors 10 and 21"
+      },
+      "geometry": {
+        "description": "Hexagonal, cubic ..."
+      }
+    },
+    "docstring": "...\n"
+  },
+  "Physisorption": {
+    "attributes": {
+      "hysteresis": {
+        "description": "Type of hysteresis behaviour"
+      },
+      "pore_diameter_in_nanometer": {
+        "description": "Self explanatory"
+      },
+      "vtotal_in_cubic_centimeters_per_gram": {
+        "description": "Total volume"
+      },
+      "ssatotal_in_square_meter_per_gram": {
+        "description": "Specific surface area"
+      },
+      "c_constant": {
+        "description": "Controlling parameter"
+      },
+      "wall_thickness_in_nanometer": {
+        "description": "Self explanatory"
+      },
+      "notice": {
+        "description": "Here you can write down additional notes"
+      }
+    },
+    "docstring": "..."
+  }
+}
