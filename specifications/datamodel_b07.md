@@ -65,7 +65,7 @@ This is a preliminary root container for all (meta-)data.
 
 Container for personal identifiers related to an author
 
-- __type*__
+- __scheme*__
   - Type: string
   - Description: Type or scheme of personal identifier
 - __identifier*__
@@ -106,25 +106,9 @@ Container for personal identifiers related to an author
 - __notice__
   - Type: string
   - Description: ...
-
-
-### Reactant[_ChemicalCompound_]
-
-Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
-
-- __product__
-  - Type: string
+- __reactant__
+  - Type: Reactant
   - Description: ...
-- __educt__
-  - Type: string
-  - Description: ...
-- __catalyst__
-  - Type: string
-  - Description: ...
-- __cocatalyst__
-  - Type: string
-  - Description: ...
-
 
 ### ChemicalCompound
 
@@ -147,6 +131,25 @@ Chemical compound that is involved in the chemical reaction, either as the produ
 - __state_of_matter__
   - Type: string
   - Description: s for solid, l for liquid and g for gaseous
+
+
+### Reactant
+
+Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
+
+- __product__
+  - Type: string
+  - Description: ...
+- __educt__
+  - Type: string
+  - Description: ...
+- __catalyst__
+  - Type: string
+  - Description: ...
+- __cocatalyst__
+  - Type: string
+  - Description: ...
+
 
 ### Stoichiometry
 
@@ -228,10 +231,10 @@ All physical parameters that are relevant for the chemical reaction
 - __nmr_1h__
   - Type: string
   - Description: ...
-- __m_PEO*__
+- __m_peo*__
   - Type: float
   - Description: Polyethylene oxide
-- __zero-five_n_PO__
+- __zero-five_n_po__
   - Type: float
   - Description: Fraction propylene oxide
 - __m_n_in_kg_per_mole__
@@ -260,7 +263,7 @@ All physical parameters that are relevant for the chemical reaction
 
 ### FilmPreparation
 
-- __m_Poly_in_grams*__
+- __m_poly_in_grams*__
   - Type: float
   - Description: Mass of the Polymer in grams
 - __precursor__
@@ -273,10 +276,10 @@ All physical parameters that are relevant for the chemical reaction
 
 ### Carbonization
 
-- __m_F_in_grams*__
+- __m_f_in_grams*__
   - Type: float
   - Description: Mass film
-- __m_FC_in_grams__
+- __m_fc_in_grams__
   - Type: float
   - Description: Mass film carbonized
 - __loss_in_grams__
