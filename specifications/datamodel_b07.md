@@ -90,7 +90,7 @@ Container for personal identifiers related to an author
   - Description: Solvent used for the reaction
 - __physical_parameters*__
   - Type: PhysicalParameter
-  - Description:
+  - Description: ...
   - Multiple: True
 - __apparatus__
   - Type: Apparatus
@@ -102,7 +102,7 @@ Container for personal identifiers related to an author
   - Multiple: True
 - __yield*__
   - Type: float
-  - Description: yield in percent
+  - Description: Yield in percent
 - __notice__
   - Type: string
   - Description: ...
@@ -111,6 +111,8 @@ Container for personal identifiers related to an author
   - Description: ...
 
 ### ChemicalCompound
+
+...
 
 - __name__
   - Type: string
@@ -153,7 +155,7 @@ Chemical compound that is involved in the chemical reaction, either as the produ
 
 ### Stoichiometry
 
-Stoichiometric information about the compound
+Stoichiometric information about the compound.
 
 - __equivalents__
   - Type: float
@@ -195,7 +197,7 @@ Lorem ipsum
 
 ### PhysicalParameter
 
-All physical parameters that are relevant for the chemical reaction
+All physical parameters that are relevant for the chemical reaction.
 
 - __temperature__
   - Type: float
@@ -209,6 +211,8 @@ All physical parameters that are relevant for the chemical reaction
 
 
 ### Analysis
+
+...
 
 - __nmr__
   - Type: NMR
@@ -226,7 +230,10 @@ All physical parameters that are relevant for the chemical reaction
   - Type: Carbonization
   - Description: ...
 
+
 ### NMR
+
+...
 
 - __nmr_1h__
   - Type: string
@@ -234,7 +241,7 @@ All physical parameters that are relevant for the chemical reaction
 - __m_peo*__
   - Type: float
   - Description: Polyethylene oxide
-- __zero-five_n_po__
+- __zeropointfive_n_po__
   - Type: float
   - Description: Fraction propylene oxide
 - __m_n_in_kg_per_mole__
@@ -246,6 +253,8 @@ All physical parameters that are relevant for the chemical reaction
 
 
 ### GPC
+
+...
 
 - __mn_in_kg_per_mole*__
   - Type: float
@@ -263,6 +272,8 @@ All physical parameters that are relevant for the chemical reaction
 
 ### FilmPreparation
 
+...
+
 - __m_poly_in_grams*__
   - Type: float
   - Description: Mass of the Polymer in grams
@@ -271,10 +282,12 @@ All physical parameters that are relevant for the chemical reaction
   - Description: Name of the precursor
 - __notice__
   - Type: string
-  - Description: Here you can write down additional notes
+  - Description: Here you can write down additional notes.
   
 
 ### Carbonization
+
+...
 
 - __m_f_in_grams*__
   - Type: float
@@ -287,10 +300,12 @@ All physical parameters that are relevant for the chemical reaction
   - Description: Loss in grams
 - __loss_in_percent__
   - Type: float
-  - Description: Loss in percernt
+  - Description: Loss in percent
 
 
 ### SAXS
+
+...
 
 - __ordered*__
   - Type: string
@@ -322,6 +337,8 @@ All physical parameters that are relevant for the chemical reaction
 
 
 ### Physisorption
+
+...
 
 - __hysteresis*__
   - Type: string
