@@ -110,25 +110,6 @@ Container for personal identifiers related to an author
   - Type: Reactant
   - Description: ...
 
-
-### Reactant [_ChemicalCompound_]
-
-Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
-
-- __product__
-  - Type: string
-  - Description: ...
-- __educt__
-  - Type: string
-  - Description: ...
-- __catalyst__
-  - Type: string
-  - Description: ...
-- __cocatalyst__
-  - Type: string
-  - Description: ...
-
-
 ### ChemicalCompound
 
 - __name__
@@ -150,6 +131,25 @@ Chemical compound that is involved in the chemical reaction, either as the produ
 - __state_of_matter__
   - Type: string
   - Description: s for solid, l for liquid and g for gaseous
+
+
+### Reactant [_ChemicalCompound_]
+
+Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
+
+- __product__
+  - Type: string
+  - Description: ...
+- __educt__
+  - Type: string
+  - Description: ...
+- __catalyst__
+  - Type: string
+  - Description: ...
+- __cocatalyst__
+  - Type: string
+  - Description: ...
+
 
 ### Stoichiometry
 
