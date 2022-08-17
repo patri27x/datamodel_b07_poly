@@ -255,7 +255,7 @@ Nuclear magnetic resonance spectroscopy.
 
 ### NMR_1H
 
-Nuclear magnetic resonance spectroscopy for detectioin of protons.
+Nuclear magnetic resonance spectroscopy for detection of protons.
 
 - __m_peo*__
   - Type: float
@@ -269,7 +269,6 @@ Nuclear magnetic resonance spectroscopy for detectioin of protons.
 - __hlb__
   - Type: string
   - Description: Hydrophilic to lipophilic balance
-
 
 
 ### GPC
