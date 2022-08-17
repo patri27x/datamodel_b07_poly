@@ -192,7 +192,7 @@ Used appratuses and special equippment or techniques for the synthesis.
   - Type: string
   - Description: ...
 - __vacuum__
-  - Type:string
+  - Type: string
   - Description: ...
 
 
@@ -209,6 +209,21 @@ Processing steps after the synthesis.
 - __film_preparation__
   - Type: FilmPreparation
   - Description: ...
+
+
+### FilmPreparation
+
+Preparation of a film of the investigated polymer for carbonization.
+
+- __m_poly_in_grams*__
+  - Type: float
+  - Description: Mass of the Polymer in grams
+- __precursor__
+  - Type: string
+  - Description: Name of the precursor
+- __notice__
+  - Type: string
+  - Description: Here you can write down additional notes.
 
 
 ### PhysicalParameter
@@ -289,23 +304,8 @@ Gel permeation chromatography.
   - Description: Polydispersity index
 - __sp_in_percent__
   - Type: float
-  - Description: Fractin of side products
+  - Description: Fraction of side products
 
-
-### FilmPreparation
-
-Preparation of a film of the investigated polymer for carbonization.
-
-- __m_poly_in_grams*__
-  - Type: float
-  - Description: Mass of the Polymer in grams
-- __precursor__
-  - Type: string
-  - Description: Name of the precursor
-- __notice__
-  - Type: string
-  - Description: Here you can write down additional notes.
-  
 
 ### Carbonization
 
