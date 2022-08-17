@@ -75,7 +75,7 @@ Container for personal identifiers related to an author
 
 ### Synthesis
 
-...description...
+All information directly related to the synthesis.
 
 - __reaction_type__
   - Type: string
@@ -112,7 +112,7 @@ Container for personal identifiers related to an author
 
 ### ChemicalCompound
 
-...
+A chemical compound or mixtures thereof.
 
 - __name__
   - Type: string
@@ -137,7 +137,7 @@ Container for personal identifiers related to an author
 
 ### Reactant[_ChemicalCompound_]
 
-Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
+Compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
 
 - __product__
   - Type: string
@@ -175,21 +175,35 @@ Stoichiometric information about the compound.
 
 ### Apparatus
 
-Lorem ipsum
+Used appratuses and special equippment or techniques for the synthesis.
 
-- __field__
+- __dropping_funnel__
   - Type: string
+  - Description: ...
+- __schlenk_technique__
+  - Type: string
+  - Description: ...
+- __gas_injection__
+  - Type: string
+  - Description: ...
+- __magnetic_stirring__
+  - Type: string
+  - Description: ...
+- __vacuum__
+  - Type:string
   - Description: ...
 
 
 ### Processing
 
-Lorem ipsum
+Processing steps after the synthesis.
 
-- __field__
+- __recrystallisation__
   - Type: string
   - Description: ...
-
+- __distillation__
+  - Type: string
+  - Description: ...
 - __film_preparation__
   - Type: FilmPreparation
   - Description: ...
@@ -212,7 +226,7 @@ All physical parameters that are relevant for the chemical reaction.
 
 ### Analysis
 
-...
+Different analyzation techniques for investigation of the products.
 
 - __nmr__
   - Type: NMR
@@ -233,11 +247,16 @@ All physical parameters that are relevant for the chemical reaction.
 
 ### NMR
 
-...
+Nuclear magnetic resonance spectroscopy.
 
 - __nmr_1h__
-  - Type: string
+  - Type: NMR_1H
   - Description: ...
+
+### NMR_1H
+
+Nuclear magnetic resonance spectroscopy for detectioin of protons.
+
 - __m_peo*__
   - Type: float
   - Description: Polyethylene oxide
@@ -252,9 +271,10 @@ All physical parameters that are relevant for the chemical reaction.
   - Description: Hydrophilic to lipophilic balance
 
 
+
 ### GPC
 
-...
+Gel permeation chromatography.
 
 - __mn_in_kg_per_mole*__
   - Type: float
@@ -272,7 +292,7 @@ All physical parameters that are relevant for the chemical reaction.
 
 ### FilmPreparation
 
-...
+Preparation of a film of the investigated polymer for carbonization.
 
 - __m_poly_in_grams*__
   - Type: float
@@ -287,7 +307,7 @@ All physical parameters that are relevant for the chemical reaction.
 
 ### Carbonization
 
-...
+Heating process to burn organic substances.
 
 - __m_f_in_grams*__
   - Type: float
@@ -305,7 +325,7 @@ All physical parameters that are relevant for the chemical reaction.
 
 ### SAXS
 
-...
+Small angle X-ray scattering.
 
 - __ordered*__
   - Type: string
@@ -338,7 +358,7 @@ All physical parameters that are relevant for the chemical reaction.
 
 ### Physisorption
 
-...
+Analytical method for the determination of the specific surface area of a substance.
 
 - __hysteresis*__
   - Type: string
