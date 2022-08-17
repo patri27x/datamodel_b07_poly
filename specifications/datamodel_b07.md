@@ -110,6 +110,7 @@ All information directly related to the synthesis.
   - Type: Reactant
   - Description: ...
 
+
 ### ChemicalCompound
 
 A chemical compound or mixtures thereof.
@@ -172,6 +173,7 @@ Stoichiometric information about the compound.
 - __molar_mass__
   - Type: float
   - Description: Molar mass of the compound in g per mol
+
 
 ### Apparatus
 
@@ -252,6 +254,7 @@ Nuclear magnetic resonance spectroscopy.
 - __nmr_1h__
   - Type: NMR_1H
   - Description: ...
+
 
 ### NMR_1H
 
