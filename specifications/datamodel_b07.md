@@ -252,11 +252,11 @@ Different analyzation techniques for investigation of the products.
 Nuclear magnetic resonance spectroscopy.
 
 - __nmr_1h__
-  - Type: NMR_1H
+  - Type: NMREINSH
   - Description: ...
 
 
-### NMR_1H
+### NMREINSH
 
 Nuclear magnetic resonance spectroscopy for detection of protons.
 
