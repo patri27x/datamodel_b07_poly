@@ -1,6 +1,6 @@
 import sdRDM
 
- 
+
 from typing import Optional
 from pydantic import PrivateAttr
 from sdRDM.base.listplus import ListPlus
@@ -13,48 +13,71 @@ from .filmpreparation import FilmPreparation
 from .physicalparameter import PhysicalParameter
 from .processing import Processing
 from .reactant import Reactant
+
+
 class Synthesis(sdRDM.DataModel):
 
-                
-    """...description...
-"""
+    """All information directly related to the synthesis."""
 
-    physical_parameters: List[PhysicalParameter] = Field(    
-    description="...",    default_factory=ListPlus,    )
+    physical_parameters: List[PhysicalParameter] = Field(
+        description="...",
+        default_factory=ListPlus,
+    )
 
-    apparatus: List[Apparatus] = Field(    
-    description="...",    default_factory=ListPlus,    )
+    apparatus: List[Apparatus] = Field(
+        description="...",
+        default_factory=ListPlus,
+    )
 
-    yield: float = Field(
-    ...,    description="Yield in percent",    )
+    yield_: float = Field(
+        ...,
+        description="Yield in percent",
+        alias="yield",
+    )
 
-    notice: Optional[str] = Field(    
-    description="...",    default=None,    )
+    notice: Optional[str] = Field(
+        description="...",
+        default=None,
+    )
 
-    reactant: Optional[Reactant] = Field(    
-    description="...",    default=None,    )
+    reactant: Optional[Reactant] = Field(
+        description="...",
+        default=None,
+    )
 
-    reaction_type: List[str] = Field(    
-    description="Name of the reaction type",    default_factory=ListPlus,    )
+    reaction_type: List[str] = Field(
+        description="Name of the reaction type",
+        default_factory=ListPlus,
+    )
 
-    reactants: List[Reactant] = Field(    
-    description="All reactants that are involved in the reaction",    default_factory=ListPlus,    )
+    reactants: List[Reactant] = Field(
+        description="All reactants that are involved in the reaction",
+        default_factory=ListPlus,
+    )
 
-    solvent: Optional[str] = Field(    
-    description="Solvent used for the reaction",    default=None,    )
+    solvent: Optional[str] = Field(
+        description="Solvent used for the reaction",
+        default=None,
+    )
 
-    processing: List[Processing] = Field(    
-    description="All subsequent processing steps",    default_factory=ListPlus,    )
+    processing: List[Processing] = Field(
+        description="All subsequent processing steps",
+        default_factory=ListPlus,
+    )
 
-    __repo__: Optional[str] = PrivateAttr(default="git://github.com/FAIRChemistry/datamodel_b07.git")
-    __commit__: Optional[str] = PrivateAttr(default="b7f50d16a78a14617f5b1cda63573feae5c120fd")
-    
+    __repo__: Optional[str] = PrivateAttr(
+        default="git://github.com/FAIRChemistry/datamodel_b07.git"
+    )
+    __commit__: Optional[str] = PrivateAttr(
+        default="1e91f179d716d820ebebf61a497ebd8d3d0db512"
+    )
+
     def add_to_reactants(
         self,
-        product: Optional[str] = None ,
-        educt: Optional[str] = None ,
-        catalyst: Optional[str] = None ,
-        cocatalyst: Optional[str] = None ,
+        product: Optional[str] = None,
+        educt: Optional[str] = None,
+        catalyst: Optional[str] = None,
+        cocatalyst: Optional[str] = None,
     ) -> None:
         """
         Adds an instance of 'Reactant' to the attribute 'reactants'.
@@ -74,11 +97,12 @@ class Synthesis(sdRDM.DataModel):
                 cocatalyst=cocatalyst,
             )
         )
+
     def add_to_physical_parameters(
         self,
-        temperature: Optional[float] = None ,
-        time: Optional[float] = None ,
-        pressure: Optional[float] = None ,
+        temperature: Optional[float] = None,
+        time: Optional[float] = None,
+        pressure: Optional[float] = None,
     ) -> None:
         """
         Adds an instance of 'PhysicalParameter' to the attribute 'physical_parameters'.
@@ -96,38 +120,55 @@ class Synthesis(sdRDM.DataModel):
                 pressure=pressure,
             )
         )
+
     def add_to_apparatus(
         self,
-        field: Optional[str] = None ,
+        dropping_funnel: Optional[str] = None,
+        schlenk_technique: Optional[str] = None,
+        gas_injection: Optional[str] = None,
+        magnetic_stirring: Optional[str] = None,
+        vacuum: Optional[str] = None,
     ) -> None:
         """
         Adds an instance of 'Apparatus' to the attribute 'apparatus'.
 
         Args:
-            field (Optional[str]): .. Defaults to None
+            dropping_funnel (Optional[str]): .. Defaults to None
+            schlenk_technique (Optional[str]): .. Defaults to None
+            gas_injection (Optional[str]): .. Defaults to None
+            magnetic_stirring (Optional[str]): .. Defaults to None
+            vacuum (Optional[str]): .. Defaults to None
         """
 
         self.apparatus.append(
             Apparatus(
-                field=field,
+                dropping_funnel=dropping_funnel,
+                schlenk_technique=schlenk_technique,
+                gas_injection=gas_injection,
+                magnetic_stirring=magnetic_stirring,
+                vacuum=vacuum,
             )
         )
+
     def add_to_processing(
         self,
-        field: Optional[str] = None ,
-        film_preparation: Optional[FilmPreparation] = None ,
+        recrystallisation: Optional[str] = None,
+        distillation: Optional[str] = None,
+        film_preparation: Optional[FilmPreparation] = None,
     ) -> None:
         """
         Adds an instance of 'Processing' to the attribute 'processing'.
 
         Args:
-            field (Optional[str]): .. Defaults to None
+            recrystallisation (Optional[str]): .. Defaults to None
+            distillation (Optional[str]): .. Defaults to None
             film_preparation (Optional[FilmPreparation]): .. Defaults to None
         """
 
         self.processing.append(
             Processing(
-                field=field,
+                recrystallisation=recrystallisation,
+                distillation=distillation,
                 film_preparation=film_preparation,
             )
         )

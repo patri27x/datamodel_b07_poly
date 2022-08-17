@@ -10,7 +10,7 @@ from typing import Optional
 
 class FilmPreparation(sdRDM.DataModel):
 
-    """..."""
+    """Preparation of a film of the investigated polymer for carbonization."""
 
     m_poly_in_grams: float = Field(
         ...,
@@ -31,5 +31,5 @@ class FilmPreparation(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="b7f50d16a78a14617f5b1cda63573feae5c120fd"
+        default="1e91f179d716d820ebebf61a497ebd8d3d0db512"
     )

@@ -92,8 +92,9 @@
         "description": "All subsequent processing steps",
         "multiple": "True"
       },
-      "yield": {
-        "description": "Yield in percent"
+      "yield_": {
+        "description": "Yield in percent",
+        "alias": "yield"
       },
       "notice": {
         "description": "..."
@@ -102,7 +103,7 @@
         "description": "..."
       }
     },
-    "docstring": "...description...\n"
+    "docstring": "All information directly related to the synthesis.\n"
   },
   "ChemicalCompound": {
     "attributes": {
@@ -126,7 +127,7 @@
         "description": "s for solid, l for liquid and g for gaseous"
       }
     },
-    "docstring": "...\n"
+    "docstring": "A chemical compound or mixtures thereof.\n"
   },
   "Reactant": {
     "attributes": {
@@ -143,7 +144,7 @@
         "description": "..."
       }
     },
-    "docstring": "Chemical compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.\n"
+    "docstring": "Compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.\n"
   },
   "Stoichiometry": {
     "attributes": {
@@ -167,22 +168,51 @@
   },
   "Apparatus": {
     "attributes": {
-      "field": {
+      "dropping_funnel": {
+        "description": "..."
+      },
+      "schlenk_technique": {
+        "description": "..."
+      },
+      "gas_injection": {
+        "description": "..."
+      },
+      "magnetic_stirring": {
+        "description": "..."
+      },
+      "vacuum": {
         "description": "..."
       }
     },
-    "docstring": "Lorem ipsum\n"
+    "docstring": "Used appratuses and special equippment or techniques for the synthesis.\n"
   },
   "Processing": {
     "attributes": {
-      "field": {
+      "recrystallisation": {
+        "description": "..."
+      },
+      "distillation": {
         "description": "..."
       },
       "film_preparation": {
         "description": "..."
       }
     },
-    "docstring": "Lorem ipsum\n"
+    "docstring": "Processing steps after the synthesis.\n"
+  },
+  "FilmPreparation": {
+    "attributes": {
+      "m_poly_in_grams": {
+        "description": "Mass of the Polymer in grams"
+      },
+      "precursor": {
+        "description": "Name of the precursor"
+      },
+      "notice": {
+        "description": "Here you can write down additional notes."
+      }
+    },
+    "docstring": "Preparation of a film of the investigated polymer for carbonization.\n"
   },
   "PhysicalParameter": {
     "attributes": {
@@ -216,13 +246,18 @@
         "description": "..."
       }
     },
-    "docstring": "...\n"
+    "docstring": "Different analyzation techniques for investigation of the products.\n"
   },
   "NMR": {
     "attributes": {
       "nmr_1h": {
         "description": "..."
-      },
+      }
+    },
+    "docstring": "Nuclear magnetic resonance spectroscopy.\n"
+  },
+  "NMREINSH": {
+    "attributes": {
       "m_peo": {
         "description": "Polyethylene oxide"
       },
@@ -236,7 +271,7 @@
         "description": "Hydrophilic to lipophilic balance"
       }
     },
-    "docstring": "...\n"
+    "docstring": "Nuclear magnetic resonance spectroscopy for detection of protons.\n"
   },
   "GPC": {
     "attributes": {
@@ -250,24 +285,10 @@
         "description": "Polydispersity index"
       },
       "sp_in_percent": {
-        "description": "Fractin of side products"
+        "description": "Fraction of side products"
       }
     },
-    "docstring": "...\n"
-  },
-  "FilmPreparation": {
-    "attributes": {
-      "m_poly_in_grams": {
-        "description": "Mass of the Polymer in grams"
-      },
-      "precursor": {
-        "description": "Name of the precursor"
-      },
-      "notice": {
-        "description": "Here you can write down additional notes."
-      }
-    },
-    "docstring": "...\n"
+    "docstring": "Gel permeation chromatography.\n"
   },
   "Carbonization": {
     "attributes": {
@@ -284,7 +305,7 @@
         "description": "Loss in percent"
       }
     },
-    "docstring": "...\n"
+    "docstring": "Heating process to burn organic substances.\n"
   },
   "SAXS": {
     "attributes": {
@@ -316,7 +337,7 @@
         "description": "Hexagonal, cubic ..."
       }
     },
-    "docstring": "...\n"
+    "docstring": "Small angle X-ray scattering.\n"
   },
   "Physisorption": {
     "attributes": {
@@ -342,6 +363,6 @@
         "description": "Here you can write down additional notes"
       }
     },
-    "docstring": "..."
+    "docstring": "Analytical method for the determination of the specific surface area of a substance."
   }
 }

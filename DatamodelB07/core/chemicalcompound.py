@@ -12,7 +12,7 @@ from .stoichiometry import Stoichiometry
 
 class ChemicalCompound(sdRDM.DataModel):
 
-    """..."""
+    """A chemical compound or mixtures thereof."""
 
     name: List[str] = Field(
         description="If possible IUPAC name of the compound",
@@ -48,5 +48,5 @@ class ChemicalCompound(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="b7f50d16a78a14617f5b1cda63573feae5c120fd"
+        default="1e91f179d716d820ebebf61a497ebd8d3d0db512"
     )

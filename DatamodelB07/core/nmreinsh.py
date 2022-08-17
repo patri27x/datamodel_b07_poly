@@ -6,30 +6,29 @@ from pydantic import PrivateAttr
 from sdRDM.base.listplus import ListPlus
 from pydantic import Field
 from typing import Optional
-from .chemicalcompound import ChemicalCompound
 
 
-class Reactant(sdRDM.DataModel):
+class NMREINSH(sdRDM.DataModel):
 
-    """Compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst."""
+    """Nuclear magnetic resonance spectroscopy for detection of protons."""
 
-    product: Optional[str] = Field(
-        description="...",
+    m_peo: float = Field(
+        ...,
+        description="Polyethylene oxide",
+    )
+
+    zeropointfive_n_po: Optional[float] = Field(
+        description="Fraction propylene oxide",
         default=None,
     )
 
-    educt: Optional[str] = Field(
-        description="...",
+    m_n_in_kg_per_mole: Optional[float] = Field(
+        description="Number average molar mass",
         default=None,
     )
 
-    catalyst: Optional[str] = Field(
-        description="...",
-        default=None,
-    )
-
-    cocatalyst: Optional[str] = Field(
-        description="...",
+    hlb: Optional[str] = Field(
+        description="Hydrophilic to lipophilic balance",
         default=None,
     )
 

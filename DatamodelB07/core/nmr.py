@@ -6,34 +6,15 @@ from pydantic import PrivateAttr
 from sdRDM.base.listplus import ListPlus
 from pydantic import Field
 from typing import Optional
+from .nmreinsh import NMREINSH
 
 
 class NMR(sdRDM.DataModel):
 
-    """..."""
+    """Nuclear magnetic resonance spectroscopy."""
 
-    nmr_1h: Optional[str] = Field(
+    nmr_1h: Optional[NMREINSH] = Field(
         description="...",
-        default=None,
-    )
-
-    m_peo: float = Field(
-        ...,
-        description="Polyethylene oxide",
-    )
-
-    zeropointfive_n_po: Optional[float] = Field(
-        description="Fraction propylene oxide",
-        default=None,
-    )
-
-    m_n_in_kg_per_mole: Optional[float] = Field(
-        description="Number average molar mass",
-        default=None,
-    )
-
-    hlb: Optional[str] = Field(
-        description="Hydrophilic to lipophilic balance",
         default=None,
     )
 
@@ -41,5 +22,5 @@ class NMR(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="b7f50d16a78a14617f5b1cda63573feae5c120fd"
+        default="1e91f179d716d820ebebf61a497ebd8d3d0db512"
     )

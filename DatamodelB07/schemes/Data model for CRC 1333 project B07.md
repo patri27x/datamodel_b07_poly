@@ -17,6 +17,7 @@ classDiagram
     Analysis *-- SAXS
     Analysis *-- Physisorption
     Analysis *-- Carbonization
+    NMR *-- NMREINSH
     
     class Dataset {
         +string id*
@@ -50,7 +51,7 @@ classDiagram
         +PhysicalParameter[0..*] physical_parameters*
         +Apparatus[0..*] apparatus
         +Processing[0..*] processing
-        +float yield*
+        +float yield_*
         +string notice
         +Reactant reactant
     }
@@ -80,12 +81,23 @@ classDiagram
     }
     
     class Apparatus {
-        +string field
+        +string dropping_funnel
+        +string schlenk_technique
+        +string gas_injection
+        +string magnetic_stirring
+        +string vacuum
     }
     
     class Processing {
-        +string field
+        +string recrystallisation
+        +string distillation
         +FilmPreparation film_preparation
+    }
+    
+    class FilmPreparation {
+        +float m_poly_in_grams*
+        +string precursor
+        +string notice
     }
     
     class PhysicalParameter {
@@ -103,7 +115,10 @@ classDiagram
     }
     
     class NMR {
-        +string nmr_1h
+        +NMREINSH nmr_1h
+    }
+    
+    class NMREINSH {
         +float m_peo*
         +float zeropointfive_n_po
         +float m_n_in_kg_per_mole
@@ -115,12 +130,6 @@ classDiagram
         +float mw_in_kg_per_mole
         +float pdi
         +float sp_in_percent
-    }
-    
-    class FilmPreparation {
-        +float m_poly_in_grams*
-        +string precursor
-        +string notice
     }
     
     class Carbonization {

@@ -10,7 +10,7 @@ from typing import Optional
 
 class GPC(sdRDM.DataModel):
 
-    """..."""
+    """Gel permeation chromatography."""
 
     mn_in_kg_per_mole: float = Field(
         ...,
@@ -28,7 +28,7 @@ class GPC(sdRDM.DataModel):
     )
 
     sp_in_percent: Optional[float] = Field(
-        description="Fractin of side products",
+        description="Fraction of side products",
         default=None,
     )
 
@@ -36,5 +36,5 @@ class GPC(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="b7f50d16a78a14617f5b1cda63573feae5c120fd"
+        default="1e91f179d716d820ebebf61a497ebd8d3d0db512"
     )

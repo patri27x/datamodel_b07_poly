@@ -10,7 +10,7 @@ from typing import Optional
 
 class Physisorption(sdRDM.DataModel):
 
-    """..."""
+    """Analytical method for the determination of the specific surface area of a substance."""
 
     hysteresis: str = Field(
         ...,
@@ -51,5 +51,5 @@ class Physisorption(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="b7f50d16a78a14617f5b1cda63573feae5c120fd"
+        default="1e91f179d716d820ebebf61a497ebd8d3d0db512"
     )

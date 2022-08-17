@@ -7,6 +7,7 @@ from .dataset import Dataset
 from .filmpreparation import FilmPreparation
 from .gpc import GPC
 from .nmr import NMR
+from .nmreinsh import NMREINSH
 from .personalid import PersonalID
 from .physicalparameter import PhysicalParameter
 from .physisorption import Physisorption
@@ -28,6 +29,7 @@ __all__ = [
     "FilmPreparation",
     "GPC",
     "NMR",
+    "NMREINSH",
     "PersonalID",
     "PhysicalParameter",
     "Physisorption",
