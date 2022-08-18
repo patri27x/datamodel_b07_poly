@@ -51,5 +51,5 @@ class Physisorption(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="1e91f179d716d820ebebf61a497ebd8d3d0db512"
+        default="e6ac54d6361bd19baa287f756522709bea86578e"
     )
