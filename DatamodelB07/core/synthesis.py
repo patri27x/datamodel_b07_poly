@@ -4,6 +4,7 @@ import sdRDM
 from typing import Optional
 from pydantic import PrivateAttr
 from sdRDM.base.listplus import ListPlus
+from sdRDM.base.utils import forge_signature
 from pydantic import Field
 from typing import List
 from typing import Optional
@@ -15,6 +16,7 @@ from .processing import Processing
 from .reactant import Reactant
 
 
+@forge_signature
 class Synthesis(sdRDM.DataModel):
 
     """All information directly related to the synthesis."""
@@ -32,6 +34,7 @@ class Synthesis(sdRDM.DataModel):
     yield_: float = Field(
         ...,
         description="Yield in percent",
+        alias="yield_",
     )
 
     notice: Optional[str] = Field(
@@ -41,7 +44,7 @@ class Synthesis(sdRDM.DataModel):
 
     reactant: Optional[Reactant] = Field(
         description="...",
-        default=None,
+        default_factory=Reactant,
     )
 
     reaction_type: List[str] = Field(
@@ -68,7 +71,7 @@ class Synthesis(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="e6ac54d6361bd19baa287f756522709bea86578e"
+        default="5374cd9545374920a585151e990724c1e9b3d42c"
     )
 
     def add_to_reactants(

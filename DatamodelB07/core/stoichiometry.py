@@ -4,10 +4,12 @@ import sdRDM
 from typing import Optional
 from pydantic import PrivateAttr
 from sdRDM.base.listplus import ListPlus
+from sdRDM.base.utils import forge_signature
 from pydantic import Field
 from typing import Optional
 
 
+@forge_signature
 class Stoichiometry(sdRDM.DataModel):
 
     """Stoichiometric information about the compound."""
@@ -41,5 +43,5 @@ class Stoichiometry(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="e6ac54d6361bd19baa287f756522709bea86578e"
+        default="5374cd9545374920a585151e990724c1e9b3d42c"
     )

@@ -93,7 +93,8 @@
         "multiple": "True"
       },
       "yield_": {
-        "description": "Yield in percent"
+        "description": "Yield in percent",
+        "alias": "yield_"
       },
       "notice": {
         "description": "..."

@@ -4,6 +4,7 @@ import sdRDM
 from typing import Optional
 from pydantic import PrivateAttr
 from sdRDM.base.listplus import ListPlus
+from sdRDM.base.utils import forge_signature
 from pydantic import Field
 from typing import Optional
 from .carbonization import Carbonization
@@ -13,13 +14,14 @@ from .physisorption import Physisorption
 from .saxs import SAXS
 
 
+@forge_signature
 class Analysis(sdRDM.DataModel):
 
     """Different analyzation techniques for investigation of the products."""
 
     nmr: Optional[NMR] = Field(
         description="...",
-        default=None,
+        default_factory=NMR,
     )
 
     gpc: Optional[GPC] = Field(
@@ -46,5 +48,5 @@ class Analysis(sdRDM.DataModel):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="e6ac54d6361bd19baa287f756522709bea86578e"
+        default="5374cd9545374920a585151e990724c1e9b3d42c"
     )
