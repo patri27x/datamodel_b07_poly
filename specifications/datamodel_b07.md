@@ -100,7 +100,7 @@ All information directly related to the synthesis.
   - Type: Processing
   - Description: All subsequent processing steps
   - Multiple: True
-- __yield_*__
+- __yield*__
   - Type: float
   - Description: Yield in percent
 - __notice__
