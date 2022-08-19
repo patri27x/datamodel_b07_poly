@@ -36,5 +36,5 @@ class Reactant(ChemicalCompound):
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
     __commit__: Optional[str] = PrivateAttr(
-        default="5374cd9545374920a585151e990724c1e9b3d42c"
+        default="8ca837b868a3820116c4117e22632b432a667f51"
     )

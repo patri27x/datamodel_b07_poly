@@ -94,7 +94,7 @@
       },
       "yield_": {
         "description": "Yield in percent",
-        "alias": "yield_"
+        "alias": "yield"
       },
       "notice": {
         "description": "..."
