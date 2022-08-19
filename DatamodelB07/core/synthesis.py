@@ -34,7 +34,7 @@ class Synthesis(sdRDM.DataModel):
     yield_: float = Field(
         ...,
         description="Yield in percent",
-        alias="yield_",
+        alias="yield",
     )
 
     notice: Optional[str] = Field(
