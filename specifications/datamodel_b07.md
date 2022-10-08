@@ -243,7 +243,7 @@ All physical parameters that are relevant for the chemical reaction.
 
 ### Analysis
 
-Different analyzation techniques for investigation of the products.
+Different analyzation techniques for products investigation.
 
 - __nmr__
   - Type: NMR
