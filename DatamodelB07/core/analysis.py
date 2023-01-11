@@ -7,7 +7,6 @@ from pydantic import Field
 from sdRDM.base.listplus import ListPlus
 from sdRDM.base.utils import forge_signature
 from sdRDM.base.utils import forge_signature, IDGenerator
-
 from .carbonization import Carbonization
 from .gpc import GPC
 from .nmr import NMR
@@ -18,8 +17,6 @@ from .saxs import SAXS
 @forge_signature
 class Analysis(sdRDM.DataModel):
     """Different analyzation techniques for investigation of the products."""
-
-    nmr: Optional[NMR] = Field(description="...", default_factory=NMR)
 
     gpc: Optional[GPC] = Field(description="...", default=None)
 
@@ -35,10 +32,12 @@ class Analysis(sdRDM.DataModel):
         xml="@id",
     )
 
+    nmr: Optional[NMR] = Field(description="...", default=None)
+
     __repo__: Optional[str] = PrivateAttr(
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="8ca837b868a3820116c4117e22632b432a667f51"
+        default="b16ce082479f510e6c16837d7d78f8f72f17255f"
     )

@@ -8,7 +8,6 @@ from pydantic import Field
 from sdRDM.base.listplus import ListPlus
 from sdRDM.base.utils import forge_signature
 from sdRDM.base.utils import forge_signature, IDGenerator
-
 from .stoichiometry import Stoichiometry
 
 
@@ -32,14 +31,6 @@ class ChemicalCompound(sdRDM.DataModel):
         description="Name of the supplier of the compound", default=None
     )
 
-    stoichiometry: Optional[Stoichiometry] = Field(
-        description=(
-            "Stoichiometric information like equivalents, mass, amount of substance,"
-            " volume"
-        ),
-        default_factory=Stoichiometry,
-    )
-
     state_of_matter: Optional[str] = Field(
         description="s for solid, l for liquid and g for gaseous", default=None
     )
@@ -50,10 +41,18 @@ class ChemicalCompound(sdRDM.DataModel):
         xml="@id",
     )
 
+    stoichiometry: Optional[Stoichiometry] = Field(
+        description=(
+            "Stoichiometric information like equivalents, mass, amount of substance,"
+            " volume"
+        ),
+        default=None,
+    )
+
     __repo__: Optional[str] = PrivateAttr(
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="8ca837b868a3820116c4117e22632b432a667f51"
+        default="b16ce082479f510e6c16837d7d78f8f72f17255f"
     )

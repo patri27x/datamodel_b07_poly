@@ -8,7 +8,6 @@ from pydantic import Field
 from sdRDM.base.listplus import ListPlus
 from sdRDM.base.utils import forge_signature
 from sdRDM.base.utils import forge_signature, IDGenerator
-
 from .personalid import PersonalID
 
 
@@ -43,14 +42,19 @@ class Author(sdRDM.DataModel):
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="8ca837b868a3820116c4117e22632b432a667f51"
+        default="b16ce082479f510e6c16837d7d78f8f72f17255f"
     )
 
-    def add_to_pid(self, scheme: str, identifier: str) -> None:
+    def add_to_pid(
+        self, scheme: str, identifier: str, id: Optional[str] = None
+    ) -> None:
         """
         Adds an instance of 'PersonalID' to the attribute 'pid'.
 
         Args:
+
+
+            id (str): Unique identifier of the 'PersonalID' object. Defaults to 'None'.
 
 
             scheme (str): Type or scheme of personal identifier.
@@ -58,5 +62,9 @@ class Author(sdRDM.DataModel):
 
             identifier (str): String representation of the personal identifier.
         """
-        pid = [PersonalID(scheme=scheme, identifier=identifier)]
+
+        params = {"scheme": scheme, "identifier": identifier}
+        if id is not None:
+            params["id"] = id
+        pid = [PersonalID(**params)]
         self.pid = self.pid + pid

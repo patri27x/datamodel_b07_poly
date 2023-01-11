@@ -7,7 +7,6 @@ from pydantic import Field
 from sdRDM.base.listplus import ListPlus
 from sdRDM.base.utils import forge_signature
 from sdRDM.base.utils import forge_signature, IDGenerator
-
 from .filmpreparation import FilmPreparation
 
 
@@ -32,5 +31,5 @@ class Processing(sdRDM.DataModel):
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="8ca837b868a3820116c4117e22632b432a667f51"
+        default="b16ce082479f510e6c16837d7d78f8f72f17255f"
     )

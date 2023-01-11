@@ -8,7 +8,6 @@ from pydantic import Field
 from sdRDM.base.listplus import ListPlus
 from sdRDM.base.utils import forge_signature
 from sdRDM.base.utils import forge_signature, IDGenerator
-
 from .apparatus import Apparatus
 from .filmpreparation import FilmPreparation
 from .physicalparameter import PhysicalParameter
@@ -30,8 +29,6 @@ class Synthesis(sdRDM.DataModel):
     yield_: float = Field(..., description="Yield in percent", alias="yield")
 
     notice: Optional[str] = Field(description="...", default=None)
-
-    reactant: Optional[Reactant] = Field(description="...", default_factory=Reactant)
 
     reaction_type: List[str] = Field(
         description="Name of the reaction type", default_factory=ListPlus
@@ -56,12 +53,14 @@ class Synthesis(sdRDM.DataModel):
         xml="@id",
     )
 
+    reactant: Optional[Reactant] = Field(description="...", default=None)
+
     __repo__: Optional[str] = PrivateAttr(
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="8ca837b868a3820116c4117e22632b432a667f51"
+        default="b16ce082479f510e6c16837d7d78f8f72f17255f"
     )
 
     def add_to_reactants(
@@ -76,11 +75,15 @@ class Synthesis(sdRDM.DataModel):
         educt: Optional[str] = None,
         catalyst: Optional[str] = None,
         cocatalyst: Optional[str] = None,
+        id: Optional[str] = None,
     ) -> None:
         """
         Adds an instance of 'Reactant' to the attribute 'reactants'.
 
         Args:
+
+
+            id (str): Unique identifier of the 'Reactant' object. Defaults to 'None'.
 
 
             name (List[str]): If possible IUPAC name of the compound.
@@ -112,20 +115,22 @@ class Synthesis(sdRDM.DataModel):
 
             cocatalyst (Optional[str]): .. Defaults to None
         """
-        reactants = [
-            Reactant(
-                name=name,
-                formula=formula,
-                pureness=pureness,
-                supplier=supplier,
-                stoichiometry=stoichiometry,
-                state_of_matter=state_of_matter,
-                product=product,
-                educt=educt,
-                catalyst=catalyst,
-                cocatalyst=cocatalyst,
-            )
-        ]
+
+        params = {
+            "name": name,
+            "formula": formula,
+            "pureness": pureness,
+            "supplier": supplier,
+            "stoichiometry": stoichiometry,
+            "state_of_matter": state_of_matter,
+            "product": product,
+            "educt": educt,
+            "catalyst": catalyst,
+            "cocatalyst": cocatalyst,
+        }
+        if id is not None:
+            params["id"] = id
+        reactants = [Reactant(**params)]
         self.reactants = self.reactants + reactants
 
     def add_to_physical_parameters(
@@ -133,11 +138,15 @@ class Synthesis(sdRDM.DataModel):
         temperature: Optional[float] = None,
         time: Optional[float] = None,
         pressure: Optional[float] = None,
+        id: Optional[str] = None,
     ) -> None:
         """
         Adds an instance of 'PhysicalParameter' to the attribute 'physical_parameters'.
 
         Args:
+
+
+            id (str): Unique identifier of the 'PhysicalParameter' object. Defaults to 'None'.
 
 
             temperature (Optional[float]): Temperature in Kelvin. Defaults to None
@@ -148,9 +157,11 @@ class Synthesis(sdRDM.DataModel):
 
             pressure (Optional[float]): pressure in mbar. Defaults to None
         """
-        physical_parameters = [
-            PhysicalParameter(temperature=temperature, time=time, pressure=pressure)
-        ]
+
+        params = {"temperature": temperature, "time": time, "pressure": pressure}
+        if id is not None:
+            params["id"] = id
+        physical_parameters = [PhysicalParameter(**params)]
         self.physical_parameters = self.physical_parameters + physical_parameters
 
     def add_to_apparatus(
@@ -160,11 +171,15 @@ class Synthesis(sdRDM.DataModel):
         gas_injection: Optional[str] = None,
         magnetic_stirring: Optional[str] = None,
         vacuum: Optional[str] = None,
+        id: Optional[str] = None,
     ) -> None:
         """
         Adds an instance of 'Apparatus' to the attribute 'apparatus'.
 
         Args:
+
+
+            id (str): Unique identifier of the 'Apparatus' object. Defaults to 'None'.
 
 
             dropping_funnel (Optional[str]): .. Defaults to None
@@ -181,15 +196,17 @@ class Synthesis(sdRDM.DataModel):
 
             vacuum (Optional[str]): .. Defaults to None
         """
-        apparatus = [
-            Apparatus(
-                dropping_funnel=dropping_funnel,
-                schlenk_technique=schlenk_technique,
-                gas_injection=gas_injection,
-                magnetic_stirring=magnetic_stirring,
-                vacuum=vacuum,
-            )
-        ]
+
+        params = {
+            "dropping_funnel": dropping_funnel,
+            "schlenk_technique": schlenk_technique,
+            "gas_injection": gas_injection,
+            "magnetic_stirring": magnetic_stirring,
+            "vacuum": vacuum,
+        }
+        if id is not None:
+            params["id"] = id
+        apparatus = [Apparatus(**params)]
         self.apparatus = self.apparatus + apparatus
 
     def add_to_processing(
@@ -197,11 +214,15 @@ class Synthesis(sdRDM.DataModel):
         recrystallisation: Optional[str] = None,
         distillation: Optional[str] = None,
         film_preparation: Optional[FilmPreparation] = None,
+        id: Optional[str] = None,
     ) -> None:
         """
         Adds an instance of 'Processing' to the attribute 'processing'.
 
         Args:
+
+
+            id (str): Unique identifier of the 'Processing' object. Defaults to 'None'.
 
 
             recrystallisation (Optional[str]): .. Defaults to None
@@ -212,11 +233,13 @@ class Synthesis(sdRDM.DataModel):
 
             film_preparation (Optional[FilmPreparation]): .. Defaults to None
         """
-        processing = [
-            Processing(
-                recrystallisation=recrystallisation,
-                distillation=distillation,
-                film_preparation=film_preparation,
-            )
-        ]
+
+        params = {
+            "recrystallisation": recrystallisation,
+            "distillation": distillation,
+            "film_preparation": film_preparation,
+        }
+        if id is not None:
+            params["id"] = id
+        processing = [Processing(**params)]
         self.processing = self.processing + processing
