@@ -339,7 +339,7 @@
         "description": "Hexagonal, cubic ..."
       }
     },
-    "docstring": "Small angle X-ray scattering.\n"
+    "docstring": null
   },
   "Physisorption": {
     "attributes": {
