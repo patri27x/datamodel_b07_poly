@@ -1,15 +1,16 @@
 ```mermaid
 classDiagram
+    ChemicalCompound <-- Test
     ChemicalCompound <-- Reactant
     Dataset *-- Author
     Dataset *-- Synthesis
     Dataset *-- Analysis
     Author *-- PersonalID
+    Author *-- Test
     Synthesis *-- Reactant
     Synthesis *-- PhysicalParameter
     Synthesis *-- Apparatus
     Synthesis *-- Processing
-    Synthesis *-- Reactant
     ChemicalCompound *-- Stoichiometry
     Processing *-- FilmPreparation
     Analysis *-- NMR
@@ -37,6 +38,11 @@ classDiagram
         +string email*
         +int phone
         +PersonalID[0..*] pid
+        +Test test
+    }
+    
+    class Test {
+        +string test
     }
     
     class PersonalID {
@@ -53,7 +59,6 @@ classDiagram
         +Processing[0..*] processing
         +float yield_*
         +string notice
-        +Reactant reactant
     }
     
     class ChemicalCompound {

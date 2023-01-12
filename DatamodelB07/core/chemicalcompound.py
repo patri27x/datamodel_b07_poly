@@ -54,5 +54,5 @@ class ChemicalCompound(sdRDM.DataModel):
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="a15e1eec9c4bd5a5c8a66e3014f6e0c193a39a31"
+        default="dac43649d84557db28e311ec3c0ab256f0b960a3"
     )

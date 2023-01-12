@@ -16,6 +16,7 @@ from .reactant import Reactant
 from .saxs import SAXS
 from .stoichiometry import Stoichiometry
 from .synthesis import Synthesis
+from .test import Test
 
 __doc__ = "This is the perliminary data model for CRC 1333 project B07. At the current time, the data model is still under development and major changes can occur at any time. Please feel free to make changes and contribute to the project."
 
@@ -38,4 +39,5 @@ __all__ = [
     "SAXS",
     "Stoichiometry",
     "Synthesis",
+    "Test",
 ]

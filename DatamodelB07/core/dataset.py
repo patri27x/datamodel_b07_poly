@@ -13,6 +13,7 @@ from .analysis import Analysis
 from .author import Author
 from .personalid import PersonalID
 from .synthesis import Synthesis
+from .test import Test
 
 
 @forge_signature
@@ -53,7 +54,7 @@ class Dataset(sdRDM.DataModel):
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="a15e1eec9c4bd5a5c8a66e3014f6e0c193a39a31"
+        default="dac43649d84557db28e311ec3c0ab256f0b960a3"
     )
 
     def add_to_authors(
@@ -63,6 +64,7 @@ class Dataset(sdRDM.DataModel):
         email: str,
         pid: List[PersonalID],
         phone: Optional[int] = None,
+        test: Optional[Test] = None,
         id: Optional[str] = None,
     ) -> None:
         """
@@ -87,6 +89,9 @@ class Dataset(sdRDM.DataModel):
 
 
             phone (Optional[int]): Contact phone number of the author. Defaults to None
+
+
+            test (Optional[Test]): test. Defaults to None
         """
 
         params = {
@@ -95,6 +100,7 @@ class Dataset(sdRDM.DataModel):
             "email": email,
             "pid": pid,
             "phone": phone,
+            "test": test,
         }
         if id is not None:
             params["id"] = id

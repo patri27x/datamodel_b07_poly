@@ -54,9 +54,20 @@
       "pid": {
         "multiple": "True",
         "description": "Personal identifiers of the author"
+      },
+      "test": {
+        "description": "test"
       }
     },
     "docstring": "Container for information regarding persons who worked on a dataset.\n"
+  },
+  "Test": {
+    "attributes": {
+      "test": {
+        "description": "test"
+      }
+    },
+    "docstring": null
   },
   "PersonalID": {
     "attributes": {
@@ -99,9 +110,6 @@
         "alias": "yield"
       },
       "notice": {
-        "description": "..."
-      },
-      "reactant": {
         "description": "..."
       }
     },

@@ -9,6 +9,7 @@ from sdRDM.base.listplus import ListPlus
 from sdRDM.base.utils import forge_signature
 from sdRDM.base.utils import forge_signature, IDGenerator
 from .personalid import PersonalID
+from .test import Test
 
 
 @forge_signature
@@ -37,12 +38,14 @@ class Author(sdRDM.DataModel):
         xml="@id",
     )
 
+    test: Optional[Test] = Field(description="test", default=None)
+
     __repo__: Optional[str] = PrivateAttr(
         default="git://github.com/FAIRChemistry/datamodel_b07.git"
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="a15e1eec9c4bd5a5c8a66e3014f6e0c193a39a31"
+        default="dac43649d84557db28e311ec3c0ab256f0b960a3"
     )
 
     def add_to_pid(
