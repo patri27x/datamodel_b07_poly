@@ -59,6 +59,16 @@ Container for information regarding persons who worked on a dataset.
   - Type: PersonalID
   - Multiple: True
   - Description: Personal identifiers of the author
+- __test__
+  - Type: Test
+  - Description: test
+
+
+### Test[_ChemicalCompound_]
+
+- __test__
+  - Type: string
+  - Description: test
 
 
 ### PersonalID
@@ -105,9 +115,6 @@ All information directly related to the synthesis.
   - Description: Yield in percent
 - __notice__
   - Type: string
-  - Description: ...
-- __reactant__
-  - Type: Reactant
   - Description: ...
 
 
