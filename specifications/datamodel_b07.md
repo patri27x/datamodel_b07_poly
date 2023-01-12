@@ -140,18 +140,6 @@ A chemical compound or mixtures thereof.
 
 Compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
 
-- __product__
-  - Type: string
-  - Description: ...
-- __educt__
-  - Type: string
-  - Description: ...
-- __catalyst__
-  - Type: string
-  - Description: ...
-- __cocatalyst__
-  - Type: string
-  - Description: ...
 
 
 ### Stoichiometry
@@ -326,6 +314,8 @@ Heating process to burn organic substances.
 
 
 ### SAXS
+
+Small angle X-ray scattering.
 
 - __ordered*__
   - Type: string
