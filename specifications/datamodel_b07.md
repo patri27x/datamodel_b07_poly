@@ -140,6 +140,18 @@ A chemical compound or mixtures thereof.
 
 Compound that is involved in the chemical reaction, either as the product, educt, catalyst or cocatalyst.
 
+- __product__
+  - Type: string
+  - Description: ...
+- __educt__
+  - Type: string
+  - Description: ...
+- __catalyst__
+  - Type: string
+  - Description: ...
+- __cocatalyst__
+  - Type: string
+  - Description: ...
 
 
 ### Stoichiometry
