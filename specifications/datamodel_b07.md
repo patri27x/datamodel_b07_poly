@@ -327,8 +327,6 @@ Heating process to burn organic substances.
 
 ### SAXS
 
-Small angle X-ray scattering.
-
 - __ordered*__
   - Type: string
   - Description: If a crystalline structure is present
