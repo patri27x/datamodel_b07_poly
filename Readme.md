@@ -33,7 +33,7 @@ In the following an [example](https://github.com/JR-1991/sdrdm-template/tree/mai
 
 ### 👁 How can I use it by myself?
 
-You can experiment and use this [example](https://github.com/JR-1991/sdrdm-template/tree/main/specifications) repository right away to get familiar with teh concept. This repository includes an [action](https://github.com/JR-1991/sdrdm-template/blob/main/.github/workflows/generate_api.yaml) that is triggered whenever changes are pushed. Thus, when you introduce changes to the markdown document, these will directly be reflected onto the generated software. Follow these steps to start out:
+You can experiment and use this [example](https://github.com/JR-1991/sdrdm-template/tree/main/specifications) repository right away to get familiar with the concept. This repository includes an [action](https://github.com/JR-1991/sdrdm-template/blob/main/.github/workflows/generate_api.yaml) that is triggered whenever changes are pushed. Thus, when you introduce changes to the markdown document, these will directly be reflected onto the generated software. Follow these steps to start out:
 
 1. Fork this repository into your own profile. This will create an exact copy, but you have all rights to modify it without affecting the original.
 
